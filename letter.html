@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secret Letter 💌</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: 'Quicksand', sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .envelope {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      margin: 100px auto 20px;
+      background: #ff99cc;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .envelope:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 100px;
+      background: #ff66b2;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+    }
+
+    .letter {
+      display: none;
+      margin-top: 30px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .show .letter {
+      display: block;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Click the envelope to open the letter 💌</h1>
+  <div class="envelope" onclick="openLetter()"></div>
+  <div class="letter" id="letterBox">
+    <p><strong>Dear Zainab,</strong></p>
+    <p>    you have made me the happiest man alive ever since you have come into my life. Everything about you is perfect
+      and i wouldnt change a thing(maybe the sassyness lol) and i just want you to know i like you a lot and i want u to be mine forever x
+    </p>
+    <p>Love,<br>Aadam ❤️</p>
+  </div>
+  <script>
+    function openLetter() {
+      document.body.classList.add('show');
+    }
+  </script>
+</body>
+</html>

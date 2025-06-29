@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Zainab 💖</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container" id="q1">
+    <h1>Do you like me? 🥺</h1>
+    <div class="buttons">
+      <button class="yes-btn" onclick="nextQuestion('q2')">Yes 💖</button>
+      <button class="no-btn" id="no1">No 😅</button>
+    </div>
+  </div>
+
+  <div class="container hidden" id="q2">
+    <h1>Are you sure? Just checking 😁</h1>
+    <div class="buttons">
+      <button class="yes-btn" onclick="nextQuestion('q3')">Yes 💖</button>
+      <button class="no-btn" id="no2">No 😅</button>
+    </div>
+  </div>
+
+  <div class="container hidden" id="q3">
+    <h1>What's my favorite color?</h1>
+    <div class="buttons">
+      <button onclick="nextQuestion('q4')">Black 🖤</button>
+      <button onclick="alert('Nope! Try again 😅')">Pink 🎀</button>
+      <button onclick="alert('Nope! Try again 😅')">Blue 💙</button>
+      <button onclick="alert('Nope! Try again 😅')">Rainbow 🌈</button>
+    </div>
+  </div>
+
+  <div class="container hidden" id="q4">
+    <h1>What's my favorite food?</h1>
+    <div class="buttons">
+      <button onclick="alert('Nope! Try again 😅')">Pizza 🍕</button>
+      <button onclick="alert('Nope! Try again 😅')">Burger 🍔</button>
+      <button onclick="alert('Nope! Try again 😅')">Fries 🍟</button>
+      <button onclick="nextQuestion('q5')">Zainab's cooking 🍛</button>
+    </div>
+  </div>
+
+  <div class="container hidden" id="q5">
+    <h1>What's my favorite thing?</h1>
+    <div class="buttons">
+      <button onclick="alert('Nahhh 😆')">PS5 🎮</button>
+      <button onclick="alert('Not quite 😜')">Air Fryer 🍳</button>
+      <button onclick="alert('iPad?? Nooo 😂')">iPad 📱</button>
+      <button onclick="nextQuestion('q6')">Zainab 🥰</button>
+    </div>
+  </div>
+
+  <div class="container hidden" id="q6">
+  <h1>Let’s play a lil game. Match our pics 🧩</h1>
+  <p>Tap on one from the left, then the matching one on the right!</p>
+  <div class="matching-game">
+    <div class="column" id="left-pics">
+      <img src="assets/left_1.jpg" data-pair="1">
+      <img src="assets/left_2.jpg" data-pair="2">
+      <img src="assets/left_3.jpg" data-pair="3">
+      <img src="assets/left_4.jpg" data-pair="4">
+      <img src="assets/left_5.jpg" data-pair="5">
+    </div>
+    <div class="column" id="right-pics">
+      <img src="assets/right_5.jpg" data-pair="5">
+      <img src="assets/right_4.jpg" data-pair="4">
+      <img src="assets/right_3.jpg" data-pair="3">
+      <img src="assets/right_2.jpg" data-pair="2">
+      <img src="assets/right_1.jpg" data-pair="1">
+    </div>
+  </div>
+  <p id="match-status"></p>
+</div>
+
+  <div class="container hidden" id="q7">
+    <h1>Will you be my girlfriend? 💞</h1>
+    <div class="buttons">
+      <button class="yes-btn" onclick="celebrate()">Yes!!! 💘</button>
+      <button class="no-btn" id="no-final">No 🙈</button>
+    </div>
+    <p id="final-message" class="hidden">YAAAY 🎉 I love you! ❤️</p>
+  </div>
+
+  <script src="script.js"></script>
+<a href="letter.html" class="secret-btn">💌 Secret Letter from Aadam</a>
+</body>
+</html>
